@@ -7,10 +7,7 @@ public class MyListTest {
 		list.add(15);
 		list.add(20);
 		
-		for (int i = 0; i < list.size(); i++) {
-			System.out.print(list.get(i) + ", ");
-		}
-		System.out.println();
+		MyArray.print(list);
 		
 		list.add(1, 100);
 		
@@ -83,4 +80,14 @@ class MyList {
 		return arr.length;
 	}
 
+}
+
+class MyArray {	
+	public static void print(MyList list) {
+		for (int i = 0; i < list.size(); i++) {
+			System.out.print(list.get(i) + ", ");
+		}
+		System.out.println();
+	}
+	
 }
