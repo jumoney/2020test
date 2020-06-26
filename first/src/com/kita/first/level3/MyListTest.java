@@ -11,14 +11,13 @@ public class MyListTest {
 		
 		list.add(1, 100);
 		
-		for (int i = 0; i < list.size(); i++) {
-			System.out.print(list.get(i) + ", ");
-		}
-		System.out.println();
+		MyArray.print(list);
 		
 		int delVal = list.remove(1);
 		
 		System.out.println(delVal);
+		MyArray.print(list);
+		
 	}
 
 }
@@ -83,11 +82,19 @@ class MyList {
 }
 
 class MyArray {	
-	public static void print(MyList list) {
+	
+	static void print(MyList list) {
+		System.out.println(toString(list));
+	}
+	
+	static String toString(MyList list) {
+		String temp = "";
+
 		for (int i = 0; i < list.size(); i++) {
-			System.out.print(list.get(i) + ", ");
+			temp += list.get(i) + (i<list.size()-1 ?  ", " : "");
 		}
-		System.out.println();
+		
+		return String.format("[%s]", temp);
 	}
 	
 }
