@@ -3,6 +3,13 @@ package com.kita.first.baseball;
 public class Game {
 	public static void main(String[] args) {
 		int gameCnt = 5;
+		if(args.length != 0) {
+			try {
+				gameCnt = Integer.parseInt(args[0]);
+			}catch(Exception e) {}
+		}
+		System.out.printf("%d개 숫자야구게임 Start\n", gameCnt);
+		
 		Baseball ball = new Baseball(gameCnt);
 		 MyBall myBall = new MyBall(gameCnt);
 		 do {
