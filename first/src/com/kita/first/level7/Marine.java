@@ -1,6 +1,6 @@
 package com.kita.first.level7;
 
-public class Marine extends Unit implements AttackUnit {
+public class Marine extends Unit implements AttackUnit, Carable {
 
 	private int damage;
 

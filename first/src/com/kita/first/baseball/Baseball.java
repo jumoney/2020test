@@ -18,7 +18,7 @@ public class Baseball {
 		// 랜덤값 삽입 부분
 		for (int i = 0; i < rArr.length; i++) {
 
-			rArr[i] = (int) (Math.random() * 9) + 1;
+			rArr[i] = (int)(Math.random() * 9) + 1;
 
 			for (int z = 0; z < i; z++) {
 
